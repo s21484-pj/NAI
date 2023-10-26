@@ -92,47 +92,35 @@ def compute_fuzzy(attend, hw, test):
     rule12 = skfuzzy.control.Rule(attendance[DOP] & final_test[DST] & homeworks[DST], final_grade[DST])
     rule13 = skfuzzy.control.Rule(attendance[DOP] & final_test[DB] & homeworks[DST], final_grade[DST])
     rule14 = skfuzzy.control.Rule(attendance[DOP] & final_test[DB] & homeworks[DB], final_grade[DB])
-    rule15 = skfuzzy.control.Rule(attendance[DOP] & final_test[DOP] & homeworks[BDB],
-                                  final_grade[DST])
-    rule16 = skfuzzy.control.Rule(attendance[DOP] & final_test[DOP] & homeworks[DOP],
-                                  final_grade[DOP])
+    rule15 = skfuzzy.control.Rule(attendance[DOP] & final_test[DOP] & homeworks[BDB], final_grade[DST])
+    rule16 = skfuzzy.control.Rule(attendance[DOP] & final_test[DOP] & homeworks[DOP], final_grade[DOP])
     rule17 = skfuzzy.control.Rule(attendance[DOP] & final_test[NDST] & homeworks[NDST], final_grade[NDST])
     rule18 = skfuzzy.control.Rule(attendance[DOP] & final_test[NDST] & homeworks[DST], final_grade[DOP])
     rule19 = skfuzzy.control.Rule(attendance[DST] & final_test[DOP] & homeworks[DOP], final_grade[DOP])
-    rule20 = skfuzzy.control.Rule(attendance[DST] & final_test[BDB] & homeworks[BDB],
-                                  final_grade[DB])
+    rule20 = skfuzzy.control.Rule(attendance[DST] & final_test[BDB] & homeworks[BDB], final_grade[DB])
     rule21 = skfuzzy.control.Rule(attendance[DST] & final_test[DST] & homeworks[DOP], final_grade[DST])
     rule22 = skfuzzy.control.Rule(attendance[DST] & final_test[NDST] & homeworks[NDST], final_grade[NDST])
-    rule23 = skfuzzy.control.Rule(attendance[DB] & final_test[BDB] & homeworks[DB],
-                                  final_grade[DB])
+    rule23 = skfuzzy.control.Rule(attendance[DB] & final_test[BDB] & homeworks[DB], final_grade[DB])
     rule24 = skfuzzy.control.Rule(attendance[DB] & final_test[DB] & homeworks[DB], final_grade[DB])
     rule25 = skfuzzy.control.Rule(attendance[DB] & final_test[NDST] & homeworks[NDST], final_grade[NDST])
     rule26 = skfuzzy.control.Rule(attendance[DB] & final_test[DST] & homeworks[DB], final_grade[DB])
-    rule27 = skfuzzy.control.Rule(attendance[DB] & final_test[BDB] & homeworks[BDB],
-                                  final_grade[BDB])
-    rule28 = skfuzzy.control.Rule(attendance[BDB] & final_test[BDB] & homeworks[DB],
-                                  final_grade[DB])
-    rule29 = skfuzzy.control.Rule(attendance[BDB] & final_test[DOP] & homeworks[DOP],
-                                  final_grade[DB])
+    rule27 = skfuzzy.control.Rule(attendance[DB] & final_test[BDB] & homeworks[BDB], final_grade[BDB])
+    rule28 = skfuzzy.control.Rule(attendance[BDB] & final_test[BDB] & homeworks[DB], final_grade[DB])
+    rule29 = skfuzzy.control.Rule(attendance[BDB] & final_test[DOP] & homeworks[DOP], final_grade[DB])
     rule30 = skfuzzy.control.Rule(attendance[BDB] & final_test[DOP] & homeworks[DB], final_grade[DST])
     rule31 = skfuzzy.control.Rule(attendance[BDB] & final_test[DOP] & homeworks[DST], final_grade[DST])
     rule32 = skfuzzy.control.Rule(attendance[BDB] & final_test[NDST] & homeworks[NDST], final_grade[NDST])
-    rule33 = skfuzzy.control.Rule(attendance[BDB] & final_test[DOP] & homeworks[NDST],
-                                  final_grade[DOP])
+    rule33 = skfuzzy.control.Rule(attendance[BDB] & final_test[DOP] & homeworks[NDST],final_grade[DOP])
     rule34 = skfuzzy.control.Rule(attendance[BDB] & final_test[NDST] & homeworks[DOP], final_grade[NDST])
     rule35 = skfuzzy.control.Rule(attendance[BDB] & final_test[DST] & homeworks[NDST], final_grade[DST])
     rule36 = skfuzzy.control.Rule(attendance[BDB] & final_test[NDST] & homeworks[DST], final_grade[DOP])
     rule37 = skfuzzy.control.Rule(attendance[BDB] & final_test[DB] & homeworks[NDST], final_grade[DB])
     rule38 = skfuzzy.control.Rule(attendance[BDB] & final_test[NDST] & homeworks[DB], final_grade[DOP])
     rule39 = skfuzzy.control.Rule(attendance[BDB] & final_test[NDST] & homeworks[BDB], final_grade[DST])
-    rule40 = skfuzzy.control.Rule(attendance[BDB] & final_test[DOP] & homeworks[BDB],
-                                  final_grade[DB])
-    rule41 = skfuzzy.control.Rule(attendance[BDB] & final_test[DST] & homeworks[BDB],
-                                  final_grade[DB])
-    rule42 = skfuzzy.control.Rule(attendance[BDB] & final_test[DB] & homeworks[BDB],
-                                  final_grade[DB])
-    rule43 = skfuzzy.control.Rule(attendance[BDB] & final_test[BDB] & homeworks[BDB],
-                                  final_grade[BDB])
+    rule40 = skfuzzy.control.Rule(attendance[BDB] & final_test[DOP] & homeworks[BDB], final_grade[DB])
+    rule41 = skfuzzy.control.Rule(attendance[BDB] & final_test[DST] & homeworks[BDB], final_grade[DB])
+    rule42 = skfuzzy.control.Rule(attendance[BDB] & final_test[DB] & homeworks[BDB], final_grade[DB])
+    rule43 = skfuzzy.control.Rule(attendance[BDB] & final_test[BDB] & homeworks[BDB], final_grade[BDB])
 
     """Control system setup"""
     rule_list = [rule1, rule2, rule3, rule4, rule5, rule6, rule7, rule8, rule9, rule10, rule11, rule12, rule13, rule14,
